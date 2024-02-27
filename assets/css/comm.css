@@ -6,6 +6,54 @@
 }
 
 @font-face {
+  font-family: "LeferiPoint";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteA.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LeferiPoint";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackA.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+/** Ultra Light */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 100;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
+/** Thin */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 200;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+}
+/** Regular */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+/** Medium */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 500;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+}
+/** Semi Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 600;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+}
+/** Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 700;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+@font-face {
   font-family: "Poppins";
   font-weight: 300;
   src: url(../font/Poppins-Light.woff) format("woff");
@@ -145,7 +193,7 @@ body {
   background: #fff;
   font-size: 16px;
   line-height: 1.5;
-  font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+  font-family: "LeferiPoint", "Malgun Gothic", "맑은 고딕", sans-serif;
   color: #202020;
 }
 
@@ -294,9 +342,8 @@ legend {
 }
 
 .inner {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 70px;
 }
 
 #header {
@@ -309,14 +356,9 @@ legend {
 
 #footer {
   height: 70px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
-@media screen and (min-width: 1280px) {
-  .inner {
-    padding: 0;
-  }
-}
 #logo {
   position: relative;
   z-index: 1100;
@@ -367,48 +409,6 @@ legend {
   content: "\f007";
 }
 
-.gnb-wrap .inp-burger {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border: none;
-  opacity: 0;
-  visibility: hidden;
-}
-.gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(1) {
-  transform: translateY(3px) rotate(45deg);
-}
-.gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(2) {
-  display: none;
-}
-.gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(3) {
-  transform: translateY(-3px) rotate(-45deg);
-}
-.gnb-wrap .inp-burger:checked ~ #gnb {
-  display: flex;
-  left: 0;
-}
-.gnb-wrap .label-burger {
-  position: relative;
-  z-index: 1100;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  width: 70px;
-  height: 70px;
-  cursor: pointer;
-}
-.gnb-wrap .label-burger .bar {
-  display: block;
-  width: 40px;
-  height: 5px;
-  border-radius: 3px;
-  background-color: black;
-  transition: all 0.3s;
-}
-
 #gnb {
   position: fixed;
   top: 0;
@@ -423,7 +423,98 @@ legend {
   transition: all 0.3s;
 }
 
-.slide-intro swiper-slide {
-  height: 300px;
-  background-color: lightblue;
+.maincover {
+  display: flex;
+  gap: 20px;
+}
+
+.cover-left {
+  width: 50%;
+  text-align: center;
+}
+.cover-left p {
+  font-weight: 700;
+  line-height: 100%;
+  margin-bottom: -5px;
+}
+.cover-left .tit1 {
+  line-height: 120%;
+  font-size: 92px;
+}
+.cover-left .tit2 {
+  font-size: 122px;
+}
+.cover-left .tit3 {
+  font-size: 167px;
+  margin-bottom: -25px;
+}
+.cover-left .tit4 {
+  font-size: 87px;
+  margin-bottom: 5px;
+}
+.cover-left .tit5 {
+  font-size: 161px;
+}
+
+.cover-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.cover-right .video iframe {
+  width: 100%;
+  height: 30vh;
+}
+.cover-right .txt {
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 130%;
+  margin-top: 5px;
+}
+.cover-right .sub-txt {
+  margin-top: 5px;
+}
+.cover-right button {
+  width: 160px;
+  height: 50px;
+  border-radius: 50px;
+  margin-top: 15px;
+  background: #fe668f;
+  font-size: 18px;
+  color: #fff;
+}
+.cover-right .banner {
+  width: 100%;
+  height: 70px;
+  margin-top: 55px;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+}
+
+.banner-wrap .side-banner {
+  background-image: url(../../images/main/banner.svg);
+  position: absolute;
+  position: fixed;
+  width: 200%;
+  height: 50px;
+  overflow: hidden;
+  border: #000 1px solid;
+}
+.banner-wrap .top {
+  top: 0;
+}
+.banner-wrap .right {
+  top: 100%;
+  left: -30px;
+  transform: rotate(90deg);
+}
+.banner-wrap .bottom {
+  bottom: 0;
+  left: -100%;
+}
+.banner-wrap .left {
+  top: 0px;
+  left: calc(-100vw + 45px);
+  transform: rotate(-90deg);
 }/*# sourceMappingURL=comm.css.map */

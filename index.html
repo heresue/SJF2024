@@ -46,6 +46,11 @@
     />
 
     <link
+      rel="stylesheet prefetch"
+      href="https://gist.githubusercontent.com/mfd/614e2e80a22b878bde63cb471cbe677e/raw/eef2aabfd0d588d43285431186a0cf70305ceb80/sanfrancisco-font.css"
+    />
+
+    <link
       href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap"
       rel="stylesheet"
     />
@@ -80,6 +85,10 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
     <!-- lenis -->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
   </head>
@@ -89,30 +98,59 @@
       <a href="#main" class="blind">본문 바로가기</a>
     </div>
     <div class="wrap">
-      <header id="header" class="logo">
+      <!-- <header id="header" class="logo">
         <div class="inner">
-          <!-- container 또는 inner로 설정
-                inner로 한 번 더 싸주는 이유: 배경색이 들어가는 경우/전체 가운데정렬 등의 여백 설정 등 필요성
-                주로 pc버전에서 많이 사용-->
-          <h1 id="logo">
-            <!-- 로고가 가운데에 위치하는 경우에도 logo먼저 적어준다(bcs웹접근성(먼저읽어줘야하니까)) -->
-            <a href="#">logo</a>
-          </h1>
         </div>
-      </header>
-
+      </header> -->
       <main id="main">
         <span class="blind">main</span>
         <section class="section">
           <div class="inner">
             <!-- <h2 class="sec-tit">Best Item</h2> -->
             <div class="maincover">
-                <div class="text">
-                    <h2>SEOUL JAZZ FESTIVAL 2024</h2>
+              <div class="cover-left">
+                <p class="tit1">THE 16TH</p>
+                <p class="tit2">SEOUL</p>
+                <p class="tit3">JAZZ</p>
+                <p class="tit4">FESTIVAL</p>
+                <p class="tit5">2024</p>
+              </div>
+              <div class="cover-right">
+                <div class="video">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/CrcgiZhPk0M?si=JD6gegAZ4-6ZpBke"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
                 </div>
-                .
+                <div class="txt">
+                  <p>Date: Fri, May 31 - Sun, June 2, 2024</p>
+                  <p>Venue: Olympic Park</p>
+                </div>
+                <div class="sub-txt">
+                  <p>88 garden, KSOP Dome, SK Handball Gym, Lakeside Avenue</p>
+                  <p>consectetur adipisicing elit.</p>
+                </div>
+                <button>VIEW MORE</button>
+                <div class="banner">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Commodi excepturi et facilis nisi explicabou
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
+        </section>
+        <section>
+          <div class="wrap"></div>
+        </section>
+        <section>
+          <div class="wrap"></div>
         </section>
 
         <!-- <swiper-container class="slide-intro"
@@ -147,6 +185,54 @@
         </div>
       </footer>
     </div>
+    <div class="banner-wrap">
+      <div class="side-banner top"></div>
+      <div class="side-banner right"></div>
+      <div class="side-banner bottom"></div>
+      <div class="side-banner left"></div>
+    </div>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".top", {
+        scrollTrigger: {
+          trigger: "#body",
+          start: "top",
+          end: "bottom",
+          scrub: true,
+        },
+        x: -1000,
+      });
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".right", {
+        scrollTrigger: {
+          trigger: "#body",
+          start: "top",
+          end: "bottom",
+          scrub: true,
+        },
+        y: -1000,
+      });
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".bottom", {
+        scrollTrigger: {
+          trigger: "#body",
+          start: "top",
+          end: "bottom",
+          scrub: true,
+        },
+        x: 1000,
+      });
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".left", {
+        scrollTrigger: {
+          trigger: "#body",
+          start: "top",
+          end: "bottom",
+          scrub: true,
+        },
+        y: 1000,
+      });
+    </script>
     <script>
       const lenis = new Lenis();
 
