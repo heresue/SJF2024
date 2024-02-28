@@ -424,43 +424,63 @@ legend {
 }
 
 .maincover {
+  height: 100vh;
+}
+.maincover .inner {
   display: flex;
+  height: 100%;
   gap: 20px;
 }
 
-.cover-left {
-  width: 50%;
-  text-align: center;
-}
-.cover-left p {
-  font-weight: 700;
-  line-height: 100%;
-  margin-bottom: -5px;
-}
-.cover-left .tit1 {
-  line-height: 120%;
-  font-size: 92px;
-}
-.cover-left .tit2 {
-  font-size: 122px;
-}
-.cover-left .tit3 {
-  font-size: 167px;
-  margin-bottom: -25px;
-}
-.cover-left .tit4 {
-  font-size: 87px;
-  margin-bottom: 5px;
-}
-.cover-left .tit5 {
-  font-size: 161px;
-}
-
+.cover-left,
 .cover-right {
-  width: 50%;
+  flex: 1;
+  height: calc(100vh - 140px);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
+
+.tit-wrap {
+  height: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.tit1 {
+  height: 16%;
+}
+
+.tit2 {
+  height: 16%;
+}
+
+.tit3 {
+  height: 16%;
+}
+
+.tit4 {
+  height: 16%;
+}
+
+.tit5 {
+  height: 16%;
+}
+
+.subtit {
+  height: 20%;
+}
+
+.subtit1 {
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 5px;
+}
+
 .cover-right .video iframe {
   width: 100%;
   height: 30vh;
@@ -506,7 +526,7 @@ legend {
 }
 .banner-wrap .right {
   top: 100%;
-  left: -30px;
+  left: -24px;
   transform: rotate(90deg);
 }
 .banner-wrap .bottom {
@@ -515,6 +535,6 @@ legend {
 }
 .banner-wrap .left {
   top: 0px;
-  left: calc(-100vw + 45px);
+  left: calc(-100vw + 40px);
   transform: rotate(-90deg);
 }/*# sourceMappingURL=comm.css.map */
