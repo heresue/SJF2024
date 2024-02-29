@@ -15,64 +15,61 @@
     gap: 20px;
   }
 }
-
 .cover-left,
 .cover-right {
-  flex: 1;
+  width: 50%;
   height: calc(100vh - 140px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.tit-wrap {
-  height: 100%;
-}
-img {
-  // position: relative;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.tit1 {
-  height: 16%;
-}
-.tit2 {
-  height: 16%;
-}
-.tit3 {
-  height: 16%;
-}
-.tit4 {
-  height: 16%;
-}
-.tit5 {
-  height: 16%;
-}
-.subtit {
-  height: 20%;
-}
 
-.subtit1 {
-  width: 60%;
-  margin: 0 auto;
-  padding-bottom: 5px;
+.cover-left {
+  .tit-wrap {
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  img {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    height: 95%;
+  }
+  .tit-1 {
+    height: 21%;
+  }
+  .tit-2 {
+    height: 33%;
+  }
+  .tit-3 {
+    height: 19%;
+  }
+  .tit-4 {
+    height: 26%;
+  }
 }
 
 .cover-right {
   .video {
+    width: 100%;
+    height: auto;
     iframe {
       width: 100%;
-      height: 30vh;
     }
   }
   .txt {
     font-weight: 700;
-    font-size: 23px;
+    font-size: 28px;
     line-height: 130%;
     margin-top: 5px;
   }
   .sub-txt {
+    font-size: 16px;
     margin-top: 5px;
+    width: 70%;
   }
   button {
     width: 160px;
