@@ -194,7 +194,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-family: "LeferiPoint", "Malgun Gothic", "맑은 고딕", sans-serif;
-  color: #202020;
+  color: #fff;
 }
 
 /* desktop */
@@ -343,7 +343,7 @@ legend {
 
 .inner {
   margin: 0 auto;
-  padding: 70px;
+  padding: 80px 90px;
 }
 
 #header {
@@ -423,6 +423,10 @@ legend {
   transition: all 0.3s;
 }
 
+body {
+  background: #041445;
+}
+
 .maincover {
   height: 100vh;
 }
@@ -435,7 +439,7 @@ legend {
 .cover-left,
 .cover-right {
   width: 50%;
-  height: calc(100vh - 140px);
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -453,6 +457,7 @@ legend {
   width: 100%;
   min-width: 100%;
   height: 100%;
+  filter: invert(100%);
 }
 .cover-left .tit-1 {
   height: 12%;
@@ -500,7 +505,7 @@ legend {
   height: 50px;
   border-radius: 50px;
   margin-top: 15px;
-  background: #fe668f;
+  background: #FC658E;
   font-size: 18px;
   color: #fff;
 }
@@ -513,6 +518,35 @@ legend {
   padding: 10px;
 }
 
+#second {
+  font-size: 140px;
+  font-weight: bold;
+  font-family: "LeferiPoint";
+  text-align: center;
+}
+
+#artistSec .inner {
+  display: flex;
+  gap: 5px;
+}
+#artistSec .col-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+}
+#artistSec .col-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#artistSec .col-1,
+#artistSec .col-3 {
+  margin-top: 150px;
+  transition: transform 0.1s ease;
+}
+
 .banner-wrap .side-banner {
   background-image: url(../../images/banner.svg);
   position: fixed;
@@ -520,6 +554,7 @@ legend {
   height: 50px;
   overflow: hidden;
   border: #000 1px solid;
+  filter: invert(100%);
 }
 .banner-wrap .top {
   top: 0;

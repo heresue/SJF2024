@@ -91,6 +91,8 @@
 
     <!-- lenis -->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+
+    <script defer src="./assets/js/comm.js"></script>
   </head>
   <body>
     <div class="u-skip">
@@ -196,6 +198,54 @@
             </div>
           </div>
         </section>
+        <section id="second">
+          <div class="inner">
+            <div>JAZZ UP</div>
+            <div>YOUR</div>
+            <div>SOUL</div>
+          </div>
+        </section>
+        <section id="artistSec">
+          <div class="inner">
+            <div class="col-wrap col-1 faster">
+              <img src="./images/gallery1.PNG" alt="" />
+              <img src="./images/gallery2.PNG" alt="" />
+              <img src="./images/gallery3.PNG" alt="" />
+            </div>
+            <div class="col-wrap col-2 normal">
+              <img src="./images/gallery1.PNG" alt="" />
+              <img src="./images/gallery2.PNG" alt="" />
+              <img src="./images/gallery3.PNG" alt="" />
+            </div>
+            <div class="col-wrap col-3 faster">
+              <img src="./images/gallery1.PNG" alt="" />
+              <img src="./images/gallery2.PNG" alt="" />
+              <img src="./images/gallery3.PNG" alt="" />
+            </div>
+            <div class="col-wrap col-4 normal">
+              <img src="./images/gallery1.PNG" alt="" />
+              <img src="./images/gallery2.PNG" alt="" />
+              <img src="./images/gallery3.PNG" alt="" />
+            </div>
+          </div>
+        </section>
+        <script>
+          window.addEventListener("scroll", function () {
+            // 스크롤 이벤트 리스너 등록
+            // const sections = document.querySelector("#artistSec"); // 모든 섹션을 가져옴
+            const colFaster = document.querySelectorAll(".faster"); // faster 클래스를 가진 모든 요소
+            const colNormal = document.querySelectorAll(".normal"); // normal 클래스를 가진 모든 요소
+            const scrolled = window.scrollY; // 윈도우의 스크롤값
+
+            colFaster.forEach(function (col) {
+              col.style.transform = `translateY(${scrolled * -0.3}px)`;
+            });
+
+            colNormal.forEach(function (col) {
+              col.style.transform = `translateY(${scrolled * -0.2}px)`;
+            });
+          });
+        </script>
         <section>
           <div class="wrap"></div>
         </section>
