@@ -438,13 +438,15 @@ body {
 
 .cover-left,
 .cover-right {
-  width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+.cover-left {
+  width: 65%;
+}
 .cover-left .tit-wrap {
   height: 100%;
   max-height: 100%;
@@ -459,22 +461,22 @@ body {
   height: 100%;
   filter: invert(100%);
 }
-.cover-left .tit-1 {
-  height: 13%;
-}
 .cover-left .tit-2 {
-  height: 22%;
+  height: 24%;
 }
 .cover-left .tit-3 {
-  height: 30%;
+  height: 31%;
 }
 .cover-left .tit-4 {
-  height: 15%;
-}
-.cover-left .tit-5 {
   height: 20%;
 }
+.cover-left .tit-5 {
+  height: 25%;
+}
 
+.cover-right {
+  width: 35%;
+}
 .cover-right .video {
   width: 100%;
   height: auto;
@@ -528,6 +530,9 @@ body {
 #artistSec .inner {
   display: flex;
   gap: 5px;
+  background: linear-gradient(transparent, black 30%);
+  position: relative;
+  padding-bottom: 0;
 }
 #artistSec .col-wrap {
   display: flex;
@@ -545,6 +550,44 @@ body {
 #artistSec .col-3 {
   margin-top: 150px;
   transition: transform 0.1s ease;
+}
+
+#ticketSec {
+  height: 100vh;
+  background: linear-gradient(black 80%, transparent 100%);
+  display: flex;
+  justify-content: center;
+}
+#ticketSec .ticket-wrap {
+  display: flex;
+  text-align: center;
+  gap: 8px;
+}
+#ticketSec .ticket-wrap div {
+  background: #041445;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+}
+#ticketSec .ticket-wrap div:hover {
+  border: #fff 1px solid;
+  background: black;
+  background: #FC658E;
+}
+#ticketSec .ticket-wrap div a {
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-direction: column;
+  gap: 10px;
+}
+#ticketSec .ticket-wrap div h2 {
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .banner-wrap .side-banner {
