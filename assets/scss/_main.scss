@@ -125,6 +125,8 @@ body {
 
 // artist ---------------------------
 #artistSec {
+  z-index: 1;
+  position: relative;
   .inner {
     display: flex;
     gap: 5px;
@@ -153,13 +155,16 @@ body {
 // ticket ---------------------------
 #ticketSec {
   height: 100vh;
-  background: linear-gradient(black 80%, transparent 100%);
   display: flex;
   justify-content: center;
   .ticket-wrap {
+    width: 100%;
+    background: linear-gradient(black 80%, transparent 100%);
     display: flex;
-    // margin: 0 auto;
+    justify-content: center;
     text-align: center;
+    z-index: 1;
+    position: relative;
     gap: 8px;
     div {
       background: $primary;
@@ -190,10 +195,54 @@ body {
   }
 }
 
+// full section ---------------------------
+#fullSec {
+  z-index: 0;
+  position: relative;
+  .wrap {
+    // margin-top: -120vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  img {
+    min-height: 100%;
+    object-fit: cover;
+  }
+}
+
+// history ---------------------------
+#historySec {
+  position: relative;
+  z-index: 1;
+  .inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .history {
+    transition: all 0.3s;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    &:hover {
+      translate: 0 -8%;
+    }
+  }
+  // margin-top: 20vh;
+}
+
 //
 //
 // side banner -------------------------
 .banner-wrap {
+  z-index: 10000;
+  position: relative;
   .side-banner {
     background-image: url(../../images/banner.svg);
     position: fixed;

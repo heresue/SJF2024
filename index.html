@@ -294,6 +294,40 @@
             element.setAttribute("data-aos-delay", index * 100); // 각 오브젝트에 100ms 간격으로 시간 차 설정
           });
         </script>
+        <section id="fullSec">
+          <div class="wrap">
+            <img src="./images/festival.jpg" alt="페스티벌 " />
+            <!-- <img src="./images/festival2.jpg" alt="페스티벌 " /> -->
+          </div>
+        </section>
+        <script>
+          const panel2 = document.querySelector("#fullSec .wrap");
+          ScrollTrigger.create({
+            trigger: panel2,
+            start: "top top",
+            pin: true,
+            pinSpacing: false,
+          });
+        </script>
+        <section id="historySec">
+          <div class="inner">
+            <div class="history">
+              <img src="./images/history/hstr_2023.jpg" alt="2023년">
+            </div>
+            <div class="history">
+              <img src="./images/history/hstr_2022.jpg" alt="2022년">
+            </div>
+            <div class="history">
+              <img src="./images/history/hstr_2019.jpg" alt="2019년">
+            </div>
+            <div class="history">
+              <img src="./images/history/hstr_2018.jpg" alt="2018년">
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="wrap"></div>
+        </section>
         <section>
           <div class="wrap"></div>
         </section>
