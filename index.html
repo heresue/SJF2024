@@ -203,21 +203,12 @@
           </div>
         </section>
         <section id="second">
-          <div class="inner">
+          <div class="inner scrollBg">
             <div>JAZZ UP</div>
             <div>YOUR</div>
             <div>SOUL</div>
           </div>
         </section>
-        <script>
-          const panel = document.querySelector("#second .inner");
-          ScrollTrigger.create({
-            trigger: panel,
-            start: "top top",
-            pin: true,
-            pinSpacing: false,
-          });
-        </script>
         <section id="artistSec">
           <div class="inner">
             <div class="col-wrap col-1 faster">
@@ -291,40 +282,63 @@
             duration: 1200,
           });
           document.querySelectorAll("[data-aos]").forEach((element, index) => {
-            element.setAttribute("data-aos-delay", index * 100); // 각 오브젝트에 100ms 간격으로 시간 차 설정
+            element.setAttribute("data-aos-delay", index * 150);
           });
         </script>
         <section id="fullSec">
-          <div class="wrap">
-            <img src="./images/festival.jpg" alt="페스티벌 " />
+          <div class="wrap scrollBg">
+            <img src="./images/festival8.jpg" alt="페스티벌 " />
             <!-- <img src="./images/festival2.jpg" alt="페스티벌 " /> -->
           </div>
         </section>
-        <script>
-          const panel2 = document.querySelector("#fullSec .wrap");
-          ScrollTrigger.create({
-            trigger: panel2,
-            start: "top top",
-            pin: true,
-            pinSpacing: false,
-          });
-        </script>
         <section id="historySec">
           <div class="inner">
-            <div class="history">
-              <img src="./images/history/hstr_2023.jpg" alt="2023년">
-            </div>
-            <div class="history">
-              <img src="./images/history/hstr_2022.jpg" alt="2022년">
-            </div>
-            <div class="history">
-              <img src="./images/history/hstr_2019.jpg" alt="2019년">
-            </div>
-            <div class="history">
-              <img src="./images/history/hstr_2018.jpg" alt="2018년">
+            <div class="wrap">
+              <div class="tit-wrap">
+                <h2>SEOUL JAZZ FESTIVAL</h2>
+                <h2>HISTORY</h2>
+              </div>
+              <div class="img-wrap">
+                <div id="historyBox" class="history-img">
+                  <img src="./images/history/hstr_2023.jpg" alt="2023년" />
+                </div>
+                <div class="history-img">
+                  <img src="./images/history/hstr_2022.jpg" alt="2022년" />
+                </div>
+                <div class="history-img">
+                  <img src="./images/history/hstr_2019.jpg" alt="2019년" />
+                </div>
+                <div class="history-img">
+                  <img src="./images/history/hstr_2018.jpg" alt="2018년" />
+                </div>
+              </div>
             </div>
           </div>
         </section>
+        <script>
+          const historyBox = document.getElementById("historyBox");
+
+          const onClick = (e) => {
+            const { x, y, width, height } = historyBox.getBoundingClientRect();
+            const radius = Math.sqrt(width * width + height * height);
+            historyBox.style.setProperty("--diameter", radius * 2 + "px");
+            const { clientX, clientY } = e;
+            const left = ((clientX - x - radius) / width) * 100 + "%";
+            const top = ((clientY - y - radius) / width) * 100 + "%";
+
+            historyBox.style.setProperty("--left", left);
+            historyBox.style.setProperty("--top", top);
+            historyBox.style.setProperty("--a", "");
+            setTimeout(() => {
+              historyBox.style.setProperty(
+                "--a",
+                "ripple-effect 1000ms linear"
+              );
+            });
+          };
+
+          historyBox.addEventListener("click", onClick);
+        </script>
         <section>
           <div class="wrap"></div>
         </section>
@@ -371,6 +385,17 @@
       <div class="side-banner left"></div>
     </div>
     <script>
+      // pin bg
+      gsap.utils.toArray(".scrollBg").forEach((panel, i) => {
+        ScrollTrigger.create({
+          trigger: panel,
+          start: "top top",
+          pin: true,
+          pinSpacing: false,
+        });
+      });
+
+      // banner
       gsap.registerPlugin(ScrollTrigger);
       gsap.to(".top", {
         scrollTrigger: {
@@ -411,8 +436,8 @@
         },
         y: 1000,
       });
-    </script>
-    <script>
+
+      // lenis
       const lenis = new Lenis();
 
       lenis.on("scroll", (e) => {
