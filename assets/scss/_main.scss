@@ -267,6 +267,39 @@ section {
       }
     }
   }
+  .more-btn {
+    width: 300px;
+    height: 70px;
+  }
+}
+
+// notice ---------------------------
+#notice {
+  .accordion {
+    background-color: #99999930;
+    height: 100vh;
+    li {
+      overflow: hidden;
+      height: 40px;
+      // transition: height 0.5s;
+      margin: 15px 0;
+      .title {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        border: 1px solid white;
+        padding: 5px;
+      }
+      .desc {
+        padding: 15px 5px;
+        overflow: hidden;
+        transition: height 0.5s;
+      }
+    }
+    li.on {
+      height: auto;
+    }
+  }
 }
 
 //

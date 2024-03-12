@@ -670,6 +670,35 @@ section {
     opacity: 40%;
   }
 }
+#historySec .more-btn {
+  width: 300px;
+  height: 70px;
+}
+
+#notice .accordion {
+  background-color: rgba(153, 153, 153, 0.1882352941);
+  height: 100vh;
+}
+#notice .accordion li {
+  overflow: hidden;
+  height: 40px;
+  margin: 15px 0;
+}
+#notice .accordion li .title {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  padding: 5px;
+}
+#notice .accordion li .desc {
+  padding: 15px 5px;
+  overflow: hidden;
+  transition: height 0.5s;
+}
+#notice .accordion li.on {
+  height: auto;
+}
 
 .banner-wrap {
   z-index: 10000;
