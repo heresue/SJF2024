@@ -1,4 +1,18 @@
 @charset "UTF-8";
+.bodoni-moda {
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.lora {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
 .caprasimo-regular {
   font-family: "Caprasimo", serif;
   font-weight: 400;
@@ -521,9 +535,14 @@ section {
 }
 
 #second {
-  font-size: 140px;
-  font-weight: bold;
-  font-family: "LeferiPoint";
+  height: 100vh;
+}
+#second p {
+  font-size: 9vw;
+  font-weight: 400;
+  font-family: "Bodoni Moda";
+  font-style: italic;
+  margin-bottom: -7vw;
   text-align: center;
 }
 

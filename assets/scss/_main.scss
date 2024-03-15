@@ -117,11 +117,15 @@ section {
 
 // 슬로건 ---------------------------
 #second {
-  // height: 100vh;
-  font-size: 140px;
-  font-weight: bold;
-  font-family: "LeferiPoint";
-  text-align: center;
+  height: 100vh;
+  p {
+    font-size: 9vw;
+    font-weight: 400;
+    font-family: "Bodoni Moda";
+    font-style: italic;
+    margin-bottom: -7vw;
+    text-align: center;
+  }
 }
 
 // artist ---------------------------

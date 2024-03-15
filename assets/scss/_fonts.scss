@@ -1,3 +1,22 @@
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 900
+
+.bodoni-moda {
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 700
+.lora {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
 .caprasimo-regular {
   font-family: "Caprasimo", serif;
   font-weight: 400;
