@@ -729,4 +729,9 @@ section {
   top: 0px;
   left: calc(-100vw + 40px);
   transform: rotate(-90deg);
+}
+
+.maincover .tit-wrap p {
+  font-size: 10vh;
+  margin-top: -10px;
 }/*# sourceMappingURL=comm.css.map */
